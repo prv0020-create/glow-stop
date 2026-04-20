@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GLOW STOP - Explora nuestra gama completa de productos anti-acné y protección solar. Crema solar SPF50, serums y packs para cuidar tu piel.">
+  <meta name="keywords" content="productos anti-acné, crema solar, serum, packs skincare, GLOW STOP">
+  <title>Productos | GLOW STOP - Cuidado Facial Anti-Acné + Protección Solar</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Fijo -->
+  <header class="header" role="banner">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="GLOW STOP - Ir al inicio">
+        <svg class="logo-icon" viewBox="0 0 50 50" aria-hidden="true">
+          <!-- Hoja estilizada en verde -->
+          <path d="M25 5 C15 5 5 15 5 25 C5 35 15 45 25 45 C30 45 35 42 38 38 C42 32 40 25 40 20 C40 10 30 5 25 5Z" 
+                fill="none" stroke="#4CAF50" stroke-width="1.5"/>
+          <!-- Detalle de vena -->
+          <path d="M25 10 C25 10 28 20 25 35" fill="none" stroke="#4CAF50" stroke-width="1"/>
+          <path d="M25 20 C22 22 20 25 22 28" fill="none" stroke="#4CAF50" stroke-width="0.8"/>
+          <path d="M25 28 C27 27 28 26 27 24" fill="none" stroke="#4CAF50" stroke-width="0.8"/>
+        </svg>
+        <span class="logo-text">GLOW STOP</span>
+      </a>
+      
+      <!-- Navegación Desktop -->
+      <nav class="nav-main" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Productos</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Iconos del Header -->
+      <div class="header-icons">
+        <!-- Buscar -->
+        <button class="header-icon-btn" aria-label="Buscar productos" title="Buscar">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+        
+        <!-- Wishlist -->
+        <button class="header-icon-btn" aria-label="Mi lista de deseos" title="Mis favoritos">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+        
+        <!-- Carrito -->
+        <button class="header-icon-btn" aria-label="Carrito de compras" title="Carrito">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="cart-count" aria-hidden="true">0</span>
+        </button>
+      </div>
+      
+      <!-- Menú Móvil -->
+      <button class="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <!-- Navegación Móvil -->
+    <nav class="mobile-nav" aria-label="Navegación móvil">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="products.html" class="mobile-nav-link">Productos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="main-content">
+    <!-- Hero de Productos -->
+    <section class="products-hero" aria-labelledby="products-hero-title">
+      <h1 id="products-hero-title" class="products-hero-title">Nuestra Gama de Productos</h1>
+      <p class="products-hero-subtitle">
+        Descubre nuestra línea completa diseñada para combatir el acne desde la protección solar 
+        hasta el cuidado post-tratamiento. Cada producto está formulado con ingredientes botánicos 
+        efectivos y seguros para tu piel.
+      </p>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filters-section" aria-label="Filtros de productos">
+      <div class="filters-container">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">
+          Todos los Productos
+        </button>
+        <button class="filter-btn" data-filter="solar" aria-pressed="false">
+          Protección Solar
+        </button>
+        <button class="filter-btn" data-filter="acne" aria-pressed="false">
+          Anti-Acné
+        </button>
+        <button class="filter-btn" data-filter="packs" aria-pressed="false">
+          Packs Completos
+        </button>
+      </div>
+    </section>
+
+    <!-- Grid de Productos -->
+    <section class="products-section" aria-labelledby="products-grid-title">
+      <h2 id="products-grid-title" class="visually-hidden">Catálogo de productos</h2>
+      <div class="cards-grid">
+        <!-- Producto 1 -->
+        <article class="product-card" data-category="solar">
+          <div class="product-card-image" role="img" aria-label="Crema Solar Anti-Acné SPF50">
+            <img src="spf50.png" alt="Crema Solar Anti-Acné SPF50 GLOW STOP" class="product-real-image">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Protección Solar</span>
+            <h3 class="product-card-title">Crema Solar Anti-Acné SPF50</h3>
+            <p class="product-card-description">
+              Protección solar de amplio espectro con tratamiento anti-acné. 
+              Tonos adaptables para un acabado natural y uniforme.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">25,00 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Producto 2 -->
+        <article class="product-card" data-category="acne">
+          <div class="product-card-image" role="img" aria-label="Serum Anti-Acné Concentrado">
+            <img src="productos-varios.png" alt="Serum Anti-Acné Concentrado GLOW STOP" class="product-real-image product-focus-serum">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Cuidado Anti-Acné</span>
+            <h3 class="product-card-title">Serum Anti-Acné Concentrado</h3>
+            <p class="product-card-description">
+              Serum con ácido salicílico y niacinamida para controlar brotes 
+              y reducir la aparición de imperfecciones.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">32,00 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Producto 3 -->
+        <article class="product-card" data-category="acne">
+          <div class="product-card-image" role="img" aria-label="Gel Limpiador Purificante">
+            <img src="productos-varios.png" alt="Gel Limpiador Purificante GLOW STOP" class="product-real-image product-focus-cleanser">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Cuidado Anti-Acné</span>
+            <h3 class="product-card-title">Gel Limpiador Purificante</h3>
+            <p class="product-card-description">
+              Limpieza profunda sin agresividad. Elimina impurezas y exceso 
+              de sebo respetando la barrera natural de la piel.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">18,50 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Producto 4 -->
+        <article class="product-card" data-category="acne">
+          <div class="product-card-image" role="img" aria-label="Crema Reparadora Post-Tratamiento">
+            <img src="mascarilla-gel.jpg" alt="Crema Reparadora Post-Tratamiento GLOW STOP" class="product-real-image">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Cuidado Post-Acné</span>
+            <h3 class="product-card-title">Crema Reparadora Post-Tratamiento</h3>
+            <p class="product-card-description">
+              Calmante y reparadora para después del tratamiento. 
+              Reduce rojeces y acelera la regeneración celular.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">28,00 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Producto 5 -->
+        <article class="product-card" data-category="packs">
+          <div class="product-card-image" role="img" aria-label="Pack Rutina Anti-Acné Completa">
+            <img src="pack-rutina.png" alt="Pack Rutina Anti-Acné GLOW STOP" class="product-real-image">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Pack Completo</span>
+            <h3 class="product-card-title">Pack Rutina Anti-Acné</h3>
+            <p class="product-card-description">
+              Todo lo que necesitas: limpiador + serum + crema solar SPF50 + 
+              crema reparadora. Rutina completa con descuento especial.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">89,00 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Producto 6 -->
+        <article class="product-card" data-category="solar">
+          <div class="product-card-image" role="img" aria-label="Protector Solar Mineral SPF30">
+            <img src="coleccion-spf.png" alt="Protector Solar Mineral GLOW STOP" class="product-real-image product-focus-spf">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Protección Solar</span>
+            <h3 class="product-card-title">Protector Solar Mineral SPF30</h3>
+            <p class="product-card-description">
+              Filtros minerales de óxido de zinc y dióxido de titanio. 
+              Ideal para pieles ultra sensibles y uso diario.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">22,00 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Producto 7 -->
+        <article class="product-card" data-category="acne">
+          <div class="product-card-image" role="img" aria-label="Mascarilla Descongestionante">
+            <img src="mascarilla-gel.jpg" alt="Mascarilla Descongestionante GLOW STOP" class="product-real-image">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Cuidado Anti-Acné</span>
+            <h3 class="product-card-title">Mascarilla Descongestionante</h3>
+            <p class="product-card-description">
+              Tratamiento semanal con arcilla y carbón activo. 
+              Detox profunda que reduce poros y controla el brillo.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">24,00 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Producto 8 -->
+        <article class="product-card" data-category="packs">
+          <div class="product-card-image" role="img" aria-label="Kit de Viaje Anti-Acné">
+            <img src="pack-rutina.png" alt="Kit de Viaje Anti-Acné GLOW STOP" class="product-real-image product-focus-kit">
+            <button class="product-wishlist-btn" aria-label="Añadir a favoritos">
+              <svg class="icon" viewBox="0 0 24 24" style="width: 18px; height: 18px;">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="product-card-content">
+            <span class="product-card-category">Pack Viaje</span>
+            <h3 class="product-card-title">Kit de Viaje Anti-Acné</h3>
+            <p class="product-card-description">
+              Formato viaje perfecto para tus vacaciones. 
+              Incluye mini limpiador, serum y protector solar.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-card-price">35,00 €</span>
+              <button class="btn btn-primary product-card-btn btn-add-cart">
+                Añadir al Carrito
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <!-- Sellos de confianza -->
+      <div class="footer-top">
+        <div class="footer-badge">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+          <span>100% Originales</span>
+        </div>
+        <div class="footer-badge">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <span>Pago Seguro</span>
+        </div>
+        <div class="footer-badge">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <span>Envío Gratis +50€</span>
+        </div>
+      </div>
+      
+      <!-- Contenido del Footer -->
+      <div class="footer-middle">
+        <div class="footer-section">
+          <h4>GLOW STOP</h4>
+          <p>
+            Comprometidos con tu seguridad en el cuidado personal. 
+            Productos dermatológicamente testeados para pieles sensibles y con tendencia acneica.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="products.html">Protección Solar</a></li>
+            <li><a href="products.html">Cuidado Anti-Acné</a></li>
+            <li><a href="products.html">Packs Completos</a></li>
+            <li><a href="products.html">Complementarios</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Atención al Cliente</h4>
+          <ul>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Envíos y Devoluciones</a></li>
+            <li><a href="#">Guía de Tonos</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contáctanos</h4>
+          <ul>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline; vertical-align: middle;">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>+34 900 123 456</span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline; vertical-align: middle;">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="eb8384878aab8c87849c989f849bc5888486">[email&#160;protected]</a></span>
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; display: inline; vertical-align: middle;">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Madrid, España</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Bottom Footer -->
+      <div class="footer-bottom">
+        <div class="footer-social">
+          <svg class="icon" viewBox="0 0 24 24" aria-label="Instagram" role="img"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" aria-label="Facebook" role="img"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          <svg class="icon" viewBox="0 0 24 24" aria-label="TikTok" role="img"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+        </div>
+        <p>&copy; 2025 GLOW STOP. Todos los derechos reservados. | &copy; MiniMax Agent</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js" defer></script>
+</body>
+</html>
